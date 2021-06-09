@@ -1,0 +1,52 @@
+.started{
+    max-width: 900px;
+    margin: 100px auto 50px;
+    border-radius: 20px;
+    background-color: #fbfbfb;
+    position: relative;
+    padding:  60px 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    &-heading{
+        margin-bottom: 30px;
+    }
+    &-desc{
+        max-width: 245px;
+        margin-bottom: 50px;
+        color: $gray-dark;
+    }
+    &-caption{
+        margin-bottom: 20px;
+    }
+    &-chat{
+        position: absolute;
+        bottom: 50px;
+        left: 50px;
+        width: 150px;
+    }
+    &-smile{
+        width: 200px;
+        position: absolute;
+        top: 0;
+        right: 60px;
+        transform: translate(30%,-30%);
+    }
+}
+@media screen and (max-width:769px) {
+    .started,
+    .started-smile,
+    .started-chat{
+        z-index: -1;
+    }
+    .started-chat{
+        transform: translate(-42px, -45px);
+    }
+    .started-smile{
+        transform: translate(-26px, -30px);
+    }
+    .block-heading{
+        font-size: 40px;
+    }
+}

@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,400;1,500;1,600;1,700;1,800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,li{
+    list-style-type: none;
+}
+body{
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+    color: #262e36;
+    line-height: 1;
+    background-color: white;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.text{
+    font-weight: 300;
+    color: $gray-blur;
+    line-height: 1.6;
+}
+.text--dark{
+    color: $gray-dark;
+}
+
+// body
+.wrapper{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.container{
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+    &:not(:first-child){
+        padding-bottom: 50px;
+    }
+   
+}
+// button
+.button{
+    display: inline-block;
+    font-size: 16px;
+    color: $gray-dark;
+    padding: 20px 45px;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    transition: all 0.2s linear;
+    &--primary{
+        color: white;
+        background-color: $primary-color;
+    }
+    &--outline{
+        border: 1px solid;
+        $text-color: $text-color ;
+    }
+}
+// block
+.block{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &-heading{
+        text-transform: uppercase;
+        font-size: 50px;
+        font-weight: 600;
+        span{
+            display: block;
+        }
+    }
+    &-caption{
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        position: relative;
+        display: inline-block;
+        padding: 0 10px;
+        &:before{
+            left: 0;
+            transform: translateX(-100%);
+        }
+        &:after{
+            right: 0;
+            transform: translateX(100%);
+        }
+        &:before,
+        &:after{
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            background-color: $primary-color;
+            top: 50%;     
+        }
+    }
+    &-caption--left{
+        padding-left: 40px;
+        margin-bottom: 30px;
+    }
+    &-caption--left:after{
+        display: none;
+    }
+    &-caption--left::before{
+        transform: none;
+    }
+
+}

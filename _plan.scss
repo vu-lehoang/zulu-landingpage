@@ -1,0 +1,103 @@
+.plan{
+    padding-bottom: 100px;
+    &-list{
+        display: flex;
+        justify-content: space-between;
+    }
+    &-item{
+        border: 1px solid #eee;
+        border-radius: 20px;
+        width: calc(33.33% - 30px);
+        padding: 75px 25px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        transition: all 0.2s linear;
+    }
+    &-item:hover{
+        border-color: transparent;
+        box-shadow: 0 0 50px 10px rgba(black,0.03);
+    }
+    &-item:hover .plan-start{
+        background-color: $primary-color;
+        border-color: $primary-color;
+        color: white;
+    }
+    &-name{
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 25px;
+    }
+    &-price{
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #eee;
+    }
+    &-money{
+        font-weight: bold;
+        font-size: 30px;
+    }
+    &-symbol{
+        vertical-align: top;
+    }
+    &-month{
+        font-weight: 600;
+        font-size: 30px;
+    }
+    &-desc{
+        margin-bottom: 55px;
+    }
+    &-feature{
+        font-size: 20px;
+        margin-bottom: 35px;
+        font-weight: 500;
+    }
+    &-feature-item{
+        display: flex;
+        align-items: center;
+        color: $gray-blur;
+        margin-bottom: 25px;
+        font-weight: 300;
+        &:last-of-type{
+            margin-bottom: 75px;
+        }
+    }
+
+    &-feature-icon{
+        font-size: 20px;
+        margin-right: 10px;
+    }
+    &-start{
+        margin: auto auto 0;
+        display: block;
+        width: max-content;
+    }
+    &-label{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 15px;
+        background-color: $pink-color;
+        color: white;
+        text-transform: capitalize;
+        border-radius: 0 20px 0 20px;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:769px){
+    .plan {
+        padding-bottom: 100px;
+        padding-top: 50px;
+        text-align: center;
+    }
+    .plan-list{
+        display: block;
+    }
+    .plan-item{
+        width: 100%;
+        margin-bottom: 25px;
+        align-items: center;
+    }
+}

@@ -1,0 +1,114 @@
+// header
+.mainMenu{
+    display: flex;
+}
+.header{
+    padding-top: 43px;
+    display: flex;
+    align-items: center;
+    &-logo{
+        display: flex;
+        margin-right: 180px;
+        &-zula{
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            color: $gray-dark;
+            font-size: 40px;
+            padding-left: 25px;
+        }
+    }
+    &-auth{
+        margin-left: auto;
+    }
+    &-menu{
+        display: flex;
+        align-items: center;
+        &-item:not(:first-child){
+            margin-left: 50px;
+        }
+        &-link{
+            color: $gray-dark;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+    }
+    &-toggle{
+        display: none;
+        cursor: pointer;
+    }
+    .openMenu{
+        display: none;
+        position: absolute;
+        right: 10%;
+        color: white;
+        font-size: 50px;
+    }
+    .closeMenu{
+        display: none;
+    }
+
+}
+@media screen and (max-width:1025px){
+    .mainMenu{
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: top 1s ease;
+        background-color: #000; 
+        display: none;
+    }
+    .header-toggle{
+        color: black;
+        display: inline-block;
+        padding: 12px;
+    }
+    .header .closeMenu{
+        display: block;
+        position: absolute;
+        top: 5%;
+        right: 10%;
+        color: white;
+        font-size: 50px;
+    }
+    .header .openMenu{
+        display: block;
+    }
+    .header-menu-item:not(:first-child){
+        margin-left: 0px; 
+    }
+    .header-menu-item{
+        margin-bottom: 50px;
+    }
+    .header-menu {
+        padding-bottom: 50px;
+        font-size: 50px;
+        display: block;
+    }
+    .header-auth{
+        margin-left: 0;
+    }
+    .button-mb{
+        color: white;
+        font-size: 50px;
+        display: flex;
+        margin-bottom: 20px;
+        background-color: #579aff
+    }   
+}
+@media screen and (max-width:415px) {
+    .header-menu{
+        font-size: 40px;
+    }
+    .button-mb{
+        font-size: 35px;
+    }
+}
